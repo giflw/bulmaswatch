@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var cssnano = require('gulp-cssnano');
+var csso = require('gulp-csso');
 var rename = require('gulp-rename');
 var browserSync = require('browser-sync').create();
 var cp = require('child_process');
@@ -43,7 +43,8 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
         ghostMode: {
             clicks: false,
             forms: false
-        }
+        },
+        reloadDelay: 500
     });
 
     gulp.watch(['*/*.scss', '!_site/**'], ['sass:dev']).on('change', function(event) {
@@ -83,7 +84,7 @@ gulp.task('sass', ['clean'], function() {
             suffix: '.min'
         }))
         .pipe(autoprefixer())
-        .pipe(cssnano())
+        .pipe(csso())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('.'));
 });

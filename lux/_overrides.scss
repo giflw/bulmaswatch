@@ -84,11 +84,44 @@ a {
   }
 }
 
+.navbar {
+  .navbar-link, .navbar-item {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .has-dropdown .navbar-item {
+    text-transform: none;
+  }
+
+  strong {
+    color: $white;
+  }
+
+  .navbar-burger {
+    span {
+      background-color: $grey;
+    }
+
+    &:hover, &:active {
+      background-color: lighten($primary, 10);
+    }
+  }
+}
+
 .nav {
   background-color: $primary;
   border-radius: $radius;
   color: $grey;
   min-height: 5rem;
+
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+      border-radius: $radius;
+    }
+  }
+
 
   .subtitle,
   .title {

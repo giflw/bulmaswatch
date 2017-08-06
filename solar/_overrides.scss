@@ -192,9 +192,21 @@ a {
   border-color: $grey;
 }
 
+.navbar {
+  border-radius: $radius;
+}
+
 .nav {
   background-color: $grey-dark;
   border-radius: $radius;
+
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $grey-dark;
+      border-radius: $radius;
+    }
+  }
+
 
   .nav-item a:not(.button),
   a.nav-item:not(.button) {

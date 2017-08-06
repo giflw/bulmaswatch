@@ -58,10 +58,29 @@
   }
 }
 
+.navbar {
+  .navbar-dropdown .navbar-item {
+    @include desktop {
+      color: $text;
+
+      &.is-active {
+        background-color: $navbar-dropdown-item-hover-background;
+      }
+    }
+  }
+}
+
 .nav {
   background-color: $primary;
   border-radius: $radius;
   color: rgba($white, 0.6);
+
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $primary;
+      border-radius: $radius;
+    }
+  }
 
   .subtitle,
   .title {

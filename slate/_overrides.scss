@@ -102,9 +102,32 @@
   }
 }
 
+.navbar {
+  border: 1px solid $dark;
+
+  a.navbar-item,
+  .navbar-link {
+    color: rgba($white, 0.75);
+    border-left: 1px solid rgba($white, 0.1);
+    border-right: 1px solid rgba($black, 0.2);
+
+    &:hover {
+      color: $white;
+      border-left: 1px solid rgba($black, 0.2);
+      background-color: rgba($black, 0.2);
+    }
+  }
+}
+
 .nav {
   background-color: $background;
   color: $white;
+
+  @media screen and (max-width: $tablet - 1) {
+    .nav-menu {
+      background-color: $background;
+    }
+  }
 
   .subtitle,
   .title {
