@@ -121,6 +121,27 @@
               <a href="#tabs"> Tabs </a>
             </li>
         </ul>
+        <p class="menu-label">Extensions</p>
+        <ul class="menu-list">
+            <li>
+                <a href="#timeline">Timeline</a>
+            </li>
+            <li>
+                <a href="#steps">Steps</a>
+            </li>
+            <li>
+                <a href="#badge">Badge</a>
+            </li>
+            <li>
+                <a href="#tooltip">Tooltip</a>
+            </li>
+            <li>
+                <a href="#ribbon">Ribbon</a>
+            </li>
+            <li>
+                <a href="#page-loader">Page-loader</a>
+            </li>
+        </ul>
       </aside>
     </div>
     <div class="column">
@@ -2822,6 +2843,168 @@
             </li>
           </ul>
         </div>
+      </section>
+      <section class="section" id="timeline">
+          <h1 class="title">Timeline</h1>
+          <hr>
+          <div class="timeline">
+              <div class="timeline-item" id="timeline-example-1">
+                <div class="timeline-left icon-lg">
+                  <a href="#timeline-example-1" class="timeline-icon"></a>
+                </div>
+                <div class="timeline-content">
+                  <div class="level">
+                    <div class="level-left">
+                      <div class="level-item">
+                        <div>
+                          <p class="heading">January 2017</p>
+                          <p>Timeline content - Can include any HTML element</p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <p class="level-item"><button class="button is-primary is-small">View</button></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item" id="timeline-example-2">
+                <div class="timeline-left">
+                  <a href="#timeline-example-2" class="timeline-icon icon-lg">
+                      <i class="icon fa fa-check"></i>
+                    </a>
+                </div>
+                <div class="timeline-content">
+                  <div class="level">
+                    <div class="level-left">
+                      <div class="level-item">
+                        <div>
+                          <p class="heading">February 2017</p>
+                          <p>Timeline content - Can include any HTML element</p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <p class="level-item"><button class="button is-primary is-small">View</button></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-item" id="timeline-example-3">
+                <div class="timeline-left">
+                  <a href="#timeline-example-3" class="timeline-icon icon-lg">
+                      <i class="icon fa fa-check"></i>
+                    </a>
+                </div>
+                <div class="timeline-content">
+                  <div class="level">
+                    <div class="level-left">
+                      <div class="level-item">
+                        <div>
+                          <p class="heading">March 2017</p>
+                          <p>Timeline content - Can include any HTML element</p>
+                        </div>
+                      </div>
+                      <div class="level-right">
+                        <p class="level-item"><button class="button is-primary is-small">View</button></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      </section>
+      <section class="section" id="steps">
+        <h1 class="title">Steps</h1>
+        <hr>
+        <ul class="step">
+          <li class="step-item">
+            <a href="#steps"></a>
+          </li>
+          <li class="step-item is-active">
+            <a href="#steps"></a>
+          </li>
+          <li class="step-item">
+            <a href="#steps"></a>
+          </li>
+          <li class="step-item">
+            <a href="#steps"></a>
+          </li>
+        </ul>
+
+        <ul class="step">
+          <li class="step-item">
+            <a href="#steps">Step 1</a>
+          </li>
+          <li class="step-item">
+            <a href="#steps">Step 2</a>
+          </li>
+          <li class="step-item is-active">
+            <a href="#steps">Step 3</a>
+          </li>
+          <li class="step-item">
+            <a href="#steps">Step 4</a>
+          </li>
+        </ul>
+      </section>
+      <section class="section" id="badge">
+        <h1 class="title">Badge</h1>
+        <hr>
+        <div class="column is-8">
+          <div class="block">
+            <span class="badge" data-badge="">
+              Notifications
+            </span>
+            <span class="badge" data-badge="8">
+              Notifications
+            </span>
+            <span class="badge" data-badge="88">
+              Notifications
+            </span>
+            <span class="badge" data-badge="888">
+              Notifications
+            </span>
+          </div>
+          <div class="block">
+            <button class="button badge" data-badge="">Button</button>
+            <button class="button badge" data-badge="8">Button</button>
+          </div>
+          <div class="block">
+            <button class="button is-primary badge" data-badge="">Button</button>
+            <button class="button is-primary badge" data-badge="8">Button</button>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="tooltip">
+        <h1 class="title">Tooltip</h1>
+        <hr>
+        <div class="columns text-center">
+          <div class="column">
+            <button class="button is-primary tooltip" data-tooltip="Tooltip Text">top tooltip</button>
+          </div>
+          <div class="column">
+            <button class="button is-primary tooltip tooltip-right" data-tooltip="Tooltip Text">right tooltip</button>
+          </div>
+          <div class="column">
+            <button class="button is-primary tooltip tooltip-bottom" data-tooltip="Tooltip Text">bottom tooltip</button>
+          </div>
+          <div class="column">
+            <button class="button is-primary tooltip tooltip-left" data-tooltip="Tooltip Text">left tooltip</button>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="ribbon">
+        <h1 class="title">Ribbon</h1>
+        <div class="box has-ribbon">
+          <div class="ribbon">Up to date</div>
+          Box content
+        </div>
+      </section>
+      <section class="section" id="page-loader">
+        <h1 class="title">Page-loader</h1>
+        <hr>
+        <div class="pageloader" style="width: 100%; height: 250px; position: relative;"></div>
+        <p>// Add "is-active" class to display it</p>
+        <div class="pageloader is-active" style="width: 100%; height: 250px; position: relative;"></div>
       </section>
     </div>
   </div>
