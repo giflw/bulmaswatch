@@ -1,0 +1,3 @@
+[submodule "bulma-extensions-all"]
+	path = bulma-extensions-all
+	url = https://github.com/giflw/bulma-extensions-all.git
