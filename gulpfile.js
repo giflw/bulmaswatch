@@ -47,7 +47,7 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
         reloadDelay: 500
     });
 
-    gulp.watch(['*/*.scss', '!_site/**'], ['sass:dev']).on('change', function(event) {
+    gulp.watch(['*/*.scss', '!_site/**', '!bulma-extensions-al/**'], ['sass:dev']).on('change', function(event) {
         console.log('SCSS: File ' + event.path + ' was ' + event.type + ', running tasks...');
         changedTheme = event.path.split('/')[event.path.split('/').length - 2]
     });
@@ -58,7 +58,7 @@ gulp.task('serve', ['sass:dev', 'jekyll-build'], function() {
 
 gulp.task('sass:dev', function() {
     console.log('Building', changedTheme);
-    return gulp.src(changedTheme ? `${changedTheme}/*.scss` : '*/*.scss')
+    return gulp.src([changedTheme ? `${changedTheme}/*.scss` : '*/*.scss', '!bulma-extensions-all/*'])
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: 'node_modules/bulma'
@@ -75,7 +75,7 @@ gulp.task('sass:dev', function() {
 });
 
 gulp.task('sass', ['clean'], function() {
-    return gulp.src('*/*.scss')
+    return gulp.src(['*/*.scss', '!bulma-extensions-all/**'])
         .pipe(sourcemaps.init())
         .pipe(sass({
             includePaths: 'node_modules/bulma'
